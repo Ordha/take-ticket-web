@@ -68,9 +68,19 @@
     .dotter-color{
       border: 1.5px dashed rgba(255, 255, 255, 0.3);
     }
+    .succes-color{
+      color: rgb(39, 174, 96);
+    }
+    .continue-btn{
+      background-color: rgb(39, 174, 96);
+    }
+    .modal-text-color{
+      color: rgb(74, 74, 74);
+    }
 </style>
 </head>
 <body class=" box-border m-0 p-0" >
+  <div>
     <header>
         <div class="nav font-raleway navbar bg-base-100  w-11/12 lg:w-4/5 mx-auto my-7">
             <div class="navbar-start ">
@@ -278,24 +288,25 @@
                                 
                               </tr>
                               
-                              <tr>
-                                <td class="font-inter font-medium text-xs gap-1">Total Price</td>
-                               
+                              <tr class="flex ">
+                                <td class="font-inter font-medium text-xs">Total Price</td>
+                                <td></td>
                                 <td class="font-inter font-medium text-xs"> BDT <span id="totalPrice"> 0</span></td>
                               </tr>
+                              
                             
                             </tbody>
                           </table>
-                          <div class="bg-white border-2 m-auto flex lg:mx-2 ">
-                              <input class="input input-bordered border-0 "bg-white " placeholder="Have any Cupon?"/>
-                              <button class=" btn-bg-color text-white rounded-lg px-3 my-2">Apply</button>
+                          <div class="bg-white border-2 m-auto flex lg:mx-2  w-[95%] rounded-md ">
+                              <input id="coupon-code" class="input input-bordered border-0  w-full" placeholder="Have any Cupon?"/>
+                              <button id="apply-coupon" class=" btn-bg-color text-white rounded-lg px-3 my-2 mx-2">Apply</button>
                             </div>
                         <div class="overflow-x-auto">
                         <table class="table font-inter">
                           <tbody>
-                            <tr>
+                            <tr class="flex ">
                               <td class="font-inter font-medium text-xs gap-1">Grand Total</td>
-                              
+                              <td></td>
                               <td class="font-inter font-medium text-xs "> BDT <span id="grandPrice" > 0</span></td>
                             </tr>
                           </tbody>
@@ -305,7 +316,7 @@
                       </div>
                       <p class="pt-3">Phone Number</p>
                       <div><input type="text" id="phone-number" placeholder="Enter your phone number" class="input input-bordered w-full mt-3"></div>
-                      <div><button id="next-btn" disabled class="btn-bg-color text-white font-raleway font-extrabold text-xl btn w-full mt-3">Next</button></div>
+                      <div><button id="next-btn" disabled class="btn-bg-color text-white font-raleway font-extrabold text-xl btn w-full mt-3 btn " onclick="my_modal_5.showModal()">Next</button></div>
                   </div>
         </section>
     </main>
@@ -332,7 +343,28 @@
           </aside>
         </footer>
       </footer>
+    </div>
 
+    <div class="myModal font-raleway">
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div class=" "><img class="  mx-auto my-6"  src="images/success.png" alt=""></div>
+          <div class=" "><h3 class="text-center succes-color font-bold text-2xl">SUCCESS</h3>
+          <p class="mx-auto text-center modal-text-color font-semibold text-xl">Thank you for Booking Our Bus Seats. <br>
+            We are working hard to find the best service and deals for you. 
+            </p></div>
+          <p class="py-4 w-[80%] mx-auto">Shortly you will find a confirmation in your email.</p>
+          <div class="modal-action">
+            <div class=" w-[60%] mx-auto flex justify-center">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+               <button class="btn continue-btn px-14 rounded-2xl text-white text-xl font-medium">Continue</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </dialog>
+    </div>
     <script src="scripts/index.js"></script>
 </body>
 </html>
