@@ -3,7 +3,6 @@ document.addEventListener('click', function() {
     const totalSeatSpan = document.getElementById('total-seat');
     const currentSeatSpan = document.getElementById('current-seat');
     const nextButton = document.getElementById('next-btn');
-    
 
     const couponCodeInput = document.getElementById('coupon-code');
     const applyCouponButton = document.getElementById('apply-coupon');
@@ -55,8 +54,6 @@ document.addEventListener('click', function() {
                 const convertedGrandCost = parseInt(grandCost);
                 const sum2 = convertedGrandCost + parseInt(money);
                 setInnerText("grandPrice",sum2);
-                
-
 
 
                 totalSeatSpan.textContent = remainingSeats;
