@@ -60,6 +60,7 @@ document.addEventListener('click', function() {
                 currentSeatSpan.textContent = selectedSeats;
 
                 if (selectedSeats == 4) {
+                    applyCouponButton.disabled = false;
                     nextButton.disabled = false;
                     seatButtons.forEach(function(btn) {
                         btn.disabled = true;
