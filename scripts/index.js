@@ -59,13 +59,17 @@ document.addEventListener('click', function() {
                 totalSeatSpan.textContent = remainingSeats;
                 currentSeatSpan.textContent = selectedSeats;
 
-                if (selectedSeats == 4) {
+                if (selectedSeats == 4 ) {
                     applyCouponButton.disabled = false;
-                    nextButton.disabled = false;
+                    
                     seatButtons.forEach(function(btn) {
                         btn.disabled = true;
                     });
-                } else {
+                } 
+                if(selectedSeats <=4){
+                    nextButton.disabled = false;
+                }
+                else {
                     nextButton.disabled = true;
                 }
                 button.disabled = true;
